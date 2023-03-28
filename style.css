@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li a{
+    margin: 15px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    padding-top: 5px;
+    background: rgba(112, 112, 112, 0.123);
+}
+
+nav p {
+    font-weight: bold;
+    color: white;
+    padding: 8px;
+}
+
+header {
+    height: 100vh;
+    background: no-repeat center/100% url(./img/andre-reis-1_DAlXy0wng-unsplash.jpg);
+}
+
+.header-conteudo {
+    color: white;
+    margin: auto;
+    margin-top: 140px;
+    max-width: 900px;
+    text-align :center;
+}
+
+.header-conteudo h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+/* SOBRE */
+
+.sobre {
+    background: #050505;
+}
+
+.container-sobre {
+   display: flex;
+   padding: 70px;
+}
+
+.grid-galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-galeria .img {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 6vw);
+    grid-gap: 15px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    padding-left: 70px;
+}
+
+.grid-card1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 150px;
+    height: 220px;
+}
+
+.grid-card2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 170px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.grid-card3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    width: 250px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.grid-card4 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    width: 210px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.grid-card5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    width: 363px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.comentario {
+    width: 1000px;
+    padding-top: 120px;
+}
+
+.comentario h2 {
+    color: white; 
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding-bottom: 50px;
+}
+
+.comentario spam {
+    color: #CC9544;
+    font-size: 1.6rem;
+}
+
+/* SERVICOS */
+
+.servicos {
+    background: no-repeat center/100% url(./img/fundo-servicos.jpg);
+    height: 100vh;
+    display: block;
+}
+
+.titulo-servicos {
+    color: white;
+    padding: 30px;
+}
+
+.titulo-servicos h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.tabela-servicos {
+    background: #cc964483;
+    display: block;
+    margin: auto;
+    width: 700px;
+    padding: 30px 60px;
+    border-radius: 10px;
+}
+
+.tabela-servicos .card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.438);
+}
+
+.tabela-servicos p  {
+    color: white;
+}
+
+.tabela-servicos span {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+/* AGENDAMENTO */ 
+
+.agendamento {
+    display: flex;
+    background: #160800;
+}
+
+.agendamento-titulo {
+    display: block;
+    width: 50%;
+    padding-top: 105px;
+    padding-left: 115px;
+}
+
+.agendamento h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 15px;
+    padding-left: 75px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.agendamento-titulo img {
+    width: 480px;
+    height: 215px;
+    padding-left: 80px;
+}
+
+.agendamento-form {
+    padding: 130px;
+    margin-right: 90px;
+}
+
+.agendamento-form label {
+    color: rgb(219, 218, 218);
+    display: block;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 8px;
+}
+
+.agendamento-form input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* FOOTER - CONTATO */ 
+
+.contato {
+    display: flex;
+    margin-top: 20px;
+}
+
+.mapa img {
+    width: 350px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 80px;
+    object-fit: cover;
+    border: 1px solid #050505;
+}
+
+.container-contato {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 60%;
+    justify-content: center;
+}
+
+.card-contato1 {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+}
+
+.card-contato2 {
+    width: 300px;
+    height: 200px;
+    margin-left: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.card-contato3 {
+    width: 300px;
+    height: 200px;
+    margin-left: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.container-contato p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container-contato a {
+    color: #050505;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container-contato span {
+    color: #995f07;
+    font-size: 1.3rem;
+}
+
+.copy {
+    background: rgba(112, 112, 112, 0.123);
+    display: flex;
+    margin-top: 70px;
+}
+
+.copy p {
+    display: flex;
+    padding: 30px;
+    padding-left: 350px;
+}
