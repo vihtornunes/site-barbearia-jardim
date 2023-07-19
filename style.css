@@ -12,37 +12,85 @@ p {
     font-size: 1.1rem;
 }
 
-ul {
-    list-style: none;
-    display: flex;
-}
-
-li a{
-    margin: 15px;
-    color: white;
-    font-size: 1.3rem;
-}
-
-
-
 a {
+    color: #CC9544;
     text-decoration: none;
-}
-
-
+    padding: 8px 12px;
+    position: relative; /* Adicionando posição relativa para alinhar o sublinhado */
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.2s; /* Adicionando a transição */
+  }
+  
+  a:hover::after {
+    transform: scaleX(1); /* Adicionando sublinhado no hover */
+  }
 
 nav {
     display: flex;
-    justify-content: space-between;
     margin: 0 30px;
     padding-top: 5px;
-    background: rgba(112, 112, 112, 0.123);
+    background: rgba(112, 112, 112, 0);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    width: 510px;
+    justify-content: end;
+}
+
+li a{
+    color: white;
+    font-size: 1.1rem;
 }
 
 nav p {
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
     padding: 8px;
+    padding-left: 85px;
+    width: 25%;
+}
+
+.social-media {
+    width: 30%;
+    justify-content: end;
+    display: flex;
+    margin: auto;
+}
+
+.social-media button {
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    margin-right: 25px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 4px black;
+    background-color: rgba(0, 0, 0, 0.719);
+    transition: .6s;
+}
+
+.social-media button:hover {
+    transform: translate(0, -10px);
+}
+
+.social-media button i {
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 header {
@@ -53,14 +101,26 @@ header {
 .header-conteudo {
     color: white;
     margin: auto;
-    margin-top: 140px;
+    margin-top: 120px;
     max-width: 900px;
     text-align :center;
 }
 
 .header-conteudo h1 {
-    font-size: 2.2rem;
+    font-size: 3.4rem;
     font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* SOBRE */
@@ -75,20 +135,20 @@ header {
 }
 
 .grid-galeria {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 70%;
     object-fit: cover;
 }
 
 .grid-galeria .img {
-    width: 60%;
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 6vw);
     grid-gap: 15px;
     padding-top: 120px;
     padding-bottom: 100px;
-    padding-left: 70px;
+    padding-left: 90px;
 }
 
 .grid-card1 {
@@ -142,19 +202,25 @@ header {
 
 .comentario {
     width: 1000px;
-    padding-top: 120px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 95px;
+    padding-top: 60px;
+    border-radius: 5px;
+    background-color: #0c0c0c;
 }
 
 .comentario h2 {
+    padding-left: 25px;
     color: white; 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 100;
-    padding-bottom: 50px;
 }
 
 .comentario spam {
-    color: #CC9544;
-    font-size: 1.6rem;
+    color: #cc964483;
+    font-size: 1.5rem;
 }
 
 /* SERVICOS */
@@ -207,85 +273,173 @@ header {
 
 .agendamento {
     display: flex;
+    height: 100vh;
     background: #160800;
 }
 
+/*container esquerdo */
 .agendamento-titulo {
     display: block;
     width: 50%;
-    padding-top: 105px;
+    padding-top: 15px;
     padding-left: 115px;
 }
 
 .agendamento h1 {
     color: white;
     font-size: 2.4rem;
-    font-weight: bold;
+    font-weight: 300;
     padding: 15px;
     padding-left: 75px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.agendamento-titulo img {
-    width: 480px;
-    height: 215px;
-    padding-left: 80px;
+#slider {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-left: 82px;
 }
 
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding-bottom: 35px;
+    animation: 20s slider infinite;
+    
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+    object-fit: cover; 
+}
+
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%
+    }
+    50% {
+        left: -200%
+    }
+    70% {
+        left: -200%
+    }
+    75% {
+        left: -300%
+    }
+    95% {
+        left: -300%
+    }
+    100% {
+        left: -400%
+    }
+
+}
+
+/* Container direito */
 .agendamento-form {
     padding: 130px;
     margin-right: 90px;
 }
 
+/* Estilizando as labels */
 .agendamento-form label {
-    color: rgb(219, 218, 218);
+    color: rgb(235, 235, 235);
     display: block;
-    font-weight: lighter;
+    font-weight: 300;
     padding-top: 25px;
     padding-bottom: 8px;
+    cursor: text;
+    transition: color 0.5s ease-in-out; /* Adicionando a transição para a cor do texto */
 }
 
+/* Estilizando os inputs */
 .agendamento-form input {
     width: 400px;
     height: 30px;
     border-radius: 10px;
     border: none;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    transition: border-color 0.5s ease-in-out; /* Adicionando a transição para a cor da borda inferior */
 }
+
+/* Adicionando a transição quando o mouse estiver sobre o formulário */
+.agendamento-form:hover label {
+    color: rgb(255, 255, 255); /* Altera a cor do texto ao passar o mouse */
+}
+
+.agendamento-form:hover input {
+    border-color: rgb(255, 255, 255); /* Altera a cor da borda inferior ao passar o mouse */
+}
+
+
+.meu-botao {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
 
 /* FOOTER - CONTATO */ 
 
 .contato {
+    background-color:  rgba(236, 235, 235, 0.651);
     display: flex;
-    margin-top: 20px;
+    height: 60vh;
 }
 
 .mapa img {
-    width: 350px;
-    height: 350px;
-    margin-top: 50px;
-    margin-left: 80px;
+    width: 240px;
+    height: 240px;
+    margin-top: 70px;
+    margin-left: 150px;
     object-fit: cover;
+    cursor: pointer;
     border: 1px solid #050505;
 }
 
 .container-contato {
+    background-color: #e8e8e9;
     display: flex;
-    margin-left: 50px;
-    margin-top: 50px;
-    width: 60%;
+    margin-left: 200px;
+    width: 50%;
+    height: 200px;
+    margin-top: 90px;
+    margin: auto;
+    padding-top: 35px;
+    align-items: center;
+    text-align: center;
     justify-content: center;
 }
 
 .card-contato1 {
-    width: 300px;
+    width: 250px;
     height: 200px;
-    text-align: center;
     margin: auto;
 }
 
 .card-contato2 {
-    width: 300px;
+
+    width: 200px;
     height: 200px;
     margin-left: 25px;
     text-align: center;
@@ -293,7 +447,8 @@ header {
 }
 
 .card-contato3 {
-    width: 300px;
+
+    width: 230px;
     height: 200px;
     margin-left: 25px;
     text-align: center;
@@ -301,7 +456,7 @@ header {
 }
 
 .container-contato p {
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -313,17 +468,18 @@ header {
 
 .container-contato span {
     color: #995f07;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .copy {
-    background: rgba(112, 112, 112, 0.123);
+    background: #e8e8e9;
     display: flex;
-    margin-top: 70px;
 }
 
 .copy p {
     display: flex;
-    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding-left: 350px;
+    
 }

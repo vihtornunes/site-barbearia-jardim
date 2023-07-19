@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Barbearia Jardim</title>
+    <script src="https://kit.fontawesome.com/ae49533a1c.js" crossorigin="anonymous"></script>
+    <title>Barbearia Jardim</title> 
 </head>
 <body>
     <header>
@@ -21,9 +22,15 @@
                 <li><a href="#agendar">Agendar</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <div class="social-media">
+                <button><i class="fa-brands fa-instagram"></i></button>
+                <button><i class="fa-brands fa-whatsapp"></i></i></button>
+                <button><i class="fa-brands fa-facebook"></i></button>
+            </div>
+
         </nav>
         <div class="header-conteudo">
-          <h1><br>BEM-VINDO A MELHOR<br> BARBEARIA DO GRANDE ABC.</h1>  
+          <h1 class="fade-in"><br>BEM-VINDO A MELHOR<br> BARBEARIA DO GRANDE ABC.</h1>  
         </div>    
     </header> 
     
@@ -37,7 +44,7 @@
                 <img src="./img/alexandre-lecocq-Y5nIFhQlzlo-unsplash.jpg" class="grid-card5" alt="">  
             </div>
             <div class="comentario">
-                <h2><spam>Sobre :</spam>  Somos a barbearia Jardim,<br> estamos no local há mais de 25 anos, com cortes de cabelos clássicos e modernos.<br><br>
+                <h2><spam>Sobre:</spam> Somos a barbearia Jardim,<br> estamos no local há mais de 25 anos, com cortes de cabelos clássicos e modernos.<br><br>
                     Trabalhamos com os melhores produtos do mercado<br> para a sua barba e cabelo.  
                 </h2>
             </div>
@@ -56,7 +63,7 @@
             </div>
             <div class="card">
                 <p>Corte de cabelo navalhado</p>
-                <span>20</span>
+                <span>R$20</span>
             </div>
             <div class="card">
                 <p>barba</p>
@@ -64,7 +71,7 @@
             </div>
             <div class="card">
                 <p>Barba desenhada</p>
-                <span>20</span>
+                <span>R$20</span>
             </div>
             <div class="card">
                 <p>Cabelo e Barba</p>
@@ -77,33 +84,41 @@
         </div>
     </section>
 
-    <section id="Agendar" class="agendamento">
+    <section id="agendar" class="agendamento">
         <div class="agendamento-titulo">
             <h1>Agende seu horário</h1>
-            <img src="./img/tim-mossholder-q49oU8NeOHQ-unsplash.jpg" alt="">
+            <div id="slider">
+                <figure>
+                    <img src="/img/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg" alt="">
+                    <img src="/img/delfina-pan-wJoB8D3hnzc-unsplash.jpg" alt="">
+                    <img src="/img/andre-reis-z0Cyh9nGLFY-unsplash.jpg" alt="">
+                    <img src="/img/obi-pixel7propix--sRVfY0f2d8-unsplash.jpg" alt="">
+                    <img src="/img/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg" alt="">
+                </figure>
+            </div>
         </div>
-        <div class="agendamento-form">
+        <div id="agendamento-form" class="agendamento-form">
             
             <div class="nome">
-                 <label for="">Digite seu nome</label>
-                <input type="text" placeholder="">
+                 <label for="nome">Digite seu nome</label>
+                <input type="text" class="input" placeholder="">
                
             </div>
            <div class="data">
-                <label for="">Selecione uma data</label>
-                <input type="date" placeholder="">
+                <label for="date">Selecione uma data</label>
+                <input type="date"  placeholder="">
                    
             </div>
             <div class="horario">
-                <label for="">Selecione um horário</label>
+                <label for="time">Selecione um horário</label>
                 <input type="time" placeholder="">
                 
             </div>
             <div class="telefone">
-                <label for="">Telefone</label>
-                <input type="tel" placeholder="">
-                
+                <label for="tel">Telefone</label>
+                <input type="tel" placeholder=""> 
             </div>
+            <button class="meu-botao" onmouseover="aumentar()" onmouseout="diminuir()">Clique Aqui</button>
         </div>
     </section>
 
@@ -114,7 +129,7 @@
         <div class="container-contato">
             <div class="card-contato1">
                 <p><span>Fale com a gente</span></p>
-                <a href="#">Tel: (11) 3456-7890</a>
+                <a href="#">Tel:(11) 3456-7890</a>
                 <a href="#"><br>Email: info@meusite.com</a>
             </div>
             <div class="card-contato2">
@@ -128,11 +143,15 @@
                 <p>Domingo: Fechado</p>
             </div>
         </div>
+        
     </footer>
 
     <div class="copy">
         <p>CopyRight</p>
         <p>Todos os direitos reservados.</p>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
